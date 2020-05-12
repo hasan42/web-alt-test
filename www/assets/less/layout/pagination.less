@@ -1,0 +1,32 @@
+@import url('../common/var.less');
+.pagination {
+  margin-top: 13px;
+  font-family: @font-noto-sans;
+  display: flex;
+  align-items: center;
+}
+.pagination__item {
+  position: relative;
+  width: 34px;
+  // height: 34px;
+  font-size: 13px;
+  line-height: 34px;
+  text-align: center;
+}
+.pagination__item_active {
+  font-weight: bold;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgba(#acacac, 0.3);
+  }
+}
+.pagination__item_next {
+  width: auto;
+  margin-left: 25px;
+}
