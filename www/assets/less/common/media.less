@@ -1,11 +1,24 @@
-.d-m {
+.d-d {
   display: none;
-  @media screen and (max-width: 768px) {
+  visibility: hidden;
+  @media screen and (min-width: 768px) {
     display: block;
+    visibility: visible;
   }
 }
 .d-m-n {
-  @media screen and (max-width: 768px) {
-    display: none;
+  display: none;
+  visibility: hidden;
+  @media screen and (min-width: 480px) {
+    display: block;
+    visibility: visible;
+  }
+}
+.d-m {
+  display: none;
+  visibility: hidden;
+  @media screen and (max-width: 479px) {
+    display: block;
+    visibility: visible;
   }
 }
