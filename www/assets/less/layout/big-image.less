@@ -1,3 +1,4 @@
+@import url('../common/var.less');
 .big-image {
   position: relative;
 }
@@ -18,5 +19,53 @@
     display: block;
     font-size: 18px;
     margin-bottom: 2px;
+  }
+  @media screen and (min-width: 480px) {
+    top: 10px;
+    left: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 20px;
+    left: 20px;
+    padding: 26px 39px 24px;
+    font-size: 18px;
+    line-height: 24px;
+    span {
+      margin-bottom: 6px;
+      font-size: 36px;
+      &:after {
+        content: '';
+        border: 3px solid transparent;
+        border-left: 3px solid #000;
+        position: absolute;
+        top: 34px;
+        right: 17px;
+      }
+    }
+  }
+}
+.big-image__description {
+  position: relative;
+  display: none;
+  margin-top: 13px;
+  font-size: 13px;
+  line-height: 18px;
+  font-family: @font-noto-sans;
+  color: #acacac;
+  strong {
+    font-family: @font-noto-sans-bold;
+    color: #000;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: -31px;
+    left: calc(50% - 9px);
+    border: 9px solid transparent; 
+    border-bottom: 9px solid #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
   }
 }
